@@ -59,7 +59,7 @@
   </style>
 </head>
 <body>
-  <div class="top"><span>150€ DE DESCUENTO</span> LANZAMIENTO · SOLO PARA LOS PRIMEROS CLIENTES</div>
+  <div class="top"><span>PRECIOS DE LANZAMIENTO</span> · REVISIÓN INICIAL GRATUITA</div>
 
   <nav>
     <div class="logo">Impulsa <span>Digital</span></div>
@@ -67,7 +67,7 @@
       <a href="#servicios">Servicios</a>
       <a href="#proceso">Proceso</a>
       <a href="#precios">Precios</a>
-      <a href="https://instagram.com/alexgarces14" target="_blank">Instagram</a>
+      <a href="https://instagram.com/alexgarces14" target="_blank" rel="noopener">Instagram</a>
       <a class="navbtn" href="#leadform">Pedir oferta</a>
     </div>
   </nav>
@@ -83,9 +83,9 @@
       </div>
 
       <div class="offer">
-        <h2>Oferta de lanzamiento</h2>
-        <p>Para los primeros clientes que quieran montar su web premium este mes.</p>
-        <div class="discount"><small>AHORRO TOTAL</small><strong>-150€ DTO.</strong></div>
+        <h2>Precios de lanzamiento</h2>
+        <p>Precio cerrado antes de empezar. Revisión inicial gratuita y sin compromiso.</p>
+        <div class="discount"><small>LANDING DESDE</small><strong>249€</strong></div>
         <ul>
           <li>Landing premium lista para móvil</li>
           <li>Formulario de captación</li>
@@ -161,9 +161,9 @@
       <h2 class="title">Paquetes</h2>
       <p class="sub">Empieza con una landing o monta el sistema completo con automatización y emails.</p>
       <div class="plans">
-        <div class="plan"><h3>Starter</h3><div class="old">299€</div><div class="price">249€ <small>/ único</small></div><p>Para tener una web seria y dejar de depender solo de Instagram.</p><ul><li>Landing profesional</li><li>Diseño móvil</li><li>Botón a Instagram</li><li>Formulario de contacto</li><li>Textos básicos de venta</li></ul><a class="btn btn-ghost" href="#leadform">Pedir Starter</a></div>
-        <div class="plan featured"><div class="tag">Más vendido</div><h3>Pro</h3><div class="old">749€</div><div class="price">599€ <small>/ único</small></div><p>Para captar mejor, parecer más profesional y vender con estructura.</p><ul><li>Landing premium completa</li><li>Copywriting comercial</li><li>Automatización básica IG</li><li>Captura de emails</li><li>3 emails de venta</li><li>Optimización visual</li></ul><a class="btn btn-gold" href="#leadform">Conseguir oferta</a></div>
-        <div class="plan"><h3>Business</h3><div class="old">1199€</div><div class="price">999€ <small>/ proyecto</small></div><p>Para montar un sistema completo de captación y seguimiento.</p><ul><li>Web o landing premium</li><li>Automatización IG + email</li><li>5-7 emails de venta</li><li>Estrategia de oferta</li><li>Integraciones externas</li><li>Revisión final del sistema</li></ul><a class="btn btn-ghost" href="#leadform">Pedir Business</a></div>
+        <div class="plan"><h3>Starter</h3><div class="price">249€ <small>/ único</small></div><p>Para tener una web seria y dejar de depender solo de Instagram.</p><ul><li>Landing profesional</li><li>Diseño móvil</li><li>Botón a Instagram</li><li>Formulario de contacto</li><li>Textos básicos de venta</li></ul><a class="btn btn-ghost" href="#leadform">Pedir Starter</a></div>
+        <div class="plan featured"><div class="tag">Recomendado</div><h3>Pro</h3><div class="price">599€ <small>/ único</small></div><p>Para captar mejor, parecer más profesional y vender con estructura.</p><ul><li>Landing premium completa</li><li>Copywriting comercial</li><li>Automatización básica IG</li><li>Captura de emails</li><li>3 emails de venta</li><li>Optimización visual</li></ul><a class="btn btn-gold" href="#leadform">Conseguir oferta</a></div>
+        <div class="plan"><h3>Business</h3><div class="price">999€ <small>/ proyecto</small></div><p>Para montar un sistema completo de captación y seguimiento.</p><ul><li>Web o landing premium</li><li>Automatización IG + email</li><li>5-7 emails de venta</li><li>Estrategia de oferta</li><li>Integraciones externas</li><li>Revisión final del sistema</li></ul><a class="btn btn-ghost" href="#leadform">Pedir Business</a></div>
       </div>
     </div>
   </section>
@@ -186,9 +186,11 @@
       <div class="formcopy">
         <h2>Reserva tu revisión gratuita</h2>
         <p>Déjame tus datos y te digo qué paquete encaja mejor con tu idea, qué automatización tendría sentido y cómo podríamos lanzar tu web.</p>
-        <p>También puedes escribirme directo por Instagram: <a href="https://instagram.com/alexgarces14" target="_blank">@alexgarces14</a></p>
+        <p>También puedes escribirme directo por Instagram: <a href="https://instagram.com/alexgarces14" target="_blank" rel="noopener">@alexgarces14</a></p>
       </div>
-      <form action="#" method="post">
+      <form id="lead-form" name="contacto" method="POST" data-netlify="true" netlify-honeypot="empresa_web">
+        <input type="hidden" name="form-name" value="contacto">
+        <p hidden><label>No rellenar: <input name="empresa_web"></label></p>
         <h3>Consigue tu oferta</h3>
         <p>Te contacto para revisar tu idea y explicarte cómo quedaría tu web.</p>
         <input type="text" name="nombre" placeholder="Nombre" required>
@@ -203,18 +205,47 @@
         </select>
         <textarea name="mensaje" placeholder="Qué vendes o qué idea tienes"></textarea>
         <button type="submit">Enviar solicitud</button>
-        <p class="privacy">Al enviar el formulario aceptas que te contacte para explicarte la oferta. Sin spam.</p>
+        <p class="privacy">Usaré tus datos solo para responder a esta solicitud. No los cedo a terceros. Puedes pedir que los borre escribiendo a alexgarces.digital@gmail.com.</p>
+        <p class="privacy" id="lead-status" role="status" aria-live="polite"></p>
       </form>
     </div>
   </section>
 
   <section class="final">
-    <h2>Tu marca puede verse mucho más seria esta semana.</h2>
-    <p>Aprovecha el descuento de lanzamiento y consigue una web premium preparada para vender, captar contactos y conectar con Instagram.</p>
+    <h2>Tu marca puede verse mucho más seria.</h2>
+    <p>Pide tu revisión gratuita y te digo qué paquete encaja, con precio cerrado antes de empezar.</p>
     <a class="btn btn-gold" href="#leadform">Quiero mi web premium</a>
   </section>
 
   <footer>© 2026 Impulsa Digital · Webs premium, automatización y ventas · Instagram: @alexgarces14</footer>
-  <div class="bottom"><div><strong>150€ DE DESCUENTO</strong> en paquete PRO · Solo primeros clientes</div><a href="#leadform">Conseguir oferta</a></div>
+  <div class="bottom"><div><strong>Revisión gratuita</strong> · Precio cerrado antes de empezar</div><a href="#leadform">Pedir revisión</a></div>
+<script>
+(function(){
+  var form=document.getElementById('lead-form'); if(!form) return;
+  var status=document.getElementById('lead-status');
+  var EMAIL='alexgarces.digital@gmail.com';
+  function mailtoFallback(data){
+    var body='Nombre: '+(data.get('nombre')||'')+'\nEmail: '+(data.get('email')||'')+
+      '\nTeléfono: '+(data.get('telefono')||'')+'\nServicio: '+(data.get('servicio')||'')+
+      '\n\n'+(data.get('mensaje')||'');
+    window.location.href='mailto:'+EMAIL+'?subject='+encodeURIComponent('Solicitud de revisión - Impulsa Digital')+'&body='+encodeURIComponent(body);
+    status.textContent='Se ha abierto tu correo con los datos. Si no se abre, escribe a '+EMAIL+'.';
+  }
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var data=new FormData(form);
+    if(data.get('empresa_web')) return; // bot
+    var btn=form.querySelector('button[type=submit]'); btn.disabled=true;
+    status.textContent='Enviando…';
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(data).toString()})
+      .then(function(r){
+        if(r.ok){ form.reset(); status.textContent='¡Recibido! Te respondo lo antes posible.'; }
+        else { mailtoFallback(data); }
+      })
+      .catch(function(){ mailtoFallback(data); })
+      .finally(function(){ btn.disabled=false; });
+  });
+})();
+</script>
 </body>
 </html>
